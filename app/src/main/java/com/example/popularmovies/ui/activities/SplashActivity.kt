@@ -1,8 +1,9 @@
-package com.example.popularmovies
+package com.example.popularmovies.ui.activities
 
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.example.popularmovies.R
 
 class SplashActivity  : AppCompatActivity() {
 

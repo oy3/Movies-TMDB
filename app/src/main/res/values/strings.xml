@@ -2,5 +2,5 @@
     <string name="app_name">Popular Movies</string>
     <string name="movie_title">Movie Title</string>
     <string name="overview">Overview</string>
-    <string name="release_date">Release Date</string>
+    <string name="release_date">Release Date:</string>
 </resources>

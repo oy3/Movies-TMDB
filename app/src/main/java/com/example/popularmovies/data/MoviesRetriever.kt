@@ -1,5 +1,6 @@
-package com.example.popularmovies
+package com.example.popularmovies.data
 
+import com.example.popularmovies.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Callback

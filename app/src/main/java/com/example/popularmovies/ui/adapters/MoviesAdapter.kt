@@ -1,23 +1,29 @@
-package com.example.popularmovies
+package com.example.popularmovies.ui.adapters
 
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.popularmovies.BuildConfig
+import com.example.popularmovies.R
+import com.example.popularmovies.ctx
+import com.example.popularmovies.data.MoviesEntity
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_movies_list.view.*
 
+
+
 class MoviesAdapter(private var moviesList: List<MoviesEntity>) : RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviesAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.ctx).inflate(R.layout.activity_movies_list, parent, false)
         return ViewHolder(view)
     }
 
     override fun getItemCount(): Int = moviesList.size
 
-    override fun onBindViewHolder(holder: MoviesAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(moviesList[position])
     }
 
@@ -28,7 +34,7 @@ class MoviesAdapter(private var moviesList: List<MoviesEntity>) : RecyclerView.A
             this.movies = movies
             itemView.movieTitle.text = movies.title
             itemView.movieOverview.text = movies.overview
-            itemView.rDate.text = movies.release_date
+            itemView.rDate.text = "Release Date: ${movies.release_date}"
             val imageUrl = "${BuildConfig.MOVIES_DB_URL}${movies.poster_path}"
             val titleM = movies.title
             Log.e("$titleM,Image url ==========", imageUrl)

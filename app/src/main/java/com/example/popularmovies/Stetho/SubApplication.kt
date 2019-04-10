@@ -1,14 +1,15 @@
-package com.example.popularmovies
+package com.example.popularmovies.Stetho
 
 import android.app.Application
-import com.facebook.drawee.backends.pipeline.Fresco
 import com.facebook.stetho.Stetho
 
-class PopularMoviesApplication: Application() {
+class SubApplication : Application() {
+
 
     override fun onCreate() {
         super.onCreate()
-        Fresco.initialize(this)
+
         Stetho.initializeWithDefaults(this)
     }
+
 }

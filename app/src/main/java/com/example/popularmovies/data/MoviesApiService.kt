@@ -1,4 +1,4 @@
-package com.example.popularmovies
+package com.example.popularmovies.data
 
 import retrofit2.Call
 import retrofit2.http.GET

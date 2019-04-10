@@ -16,16 +16,17 @@
             android:layout_marginStart="8dp"/>
     <TextView
             android:text="@string/movie_title"
-            android:layout_width="wrap_content"
+            android:layout_width="282dp"
             android:layout_height="wrap_content"
             android:id="@+id/movieTitle"
             android:textStyle="bold"
             android:textColor="@color/black"
-            app:layout_constraintStart_toEndOf="@+id/movieImg"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
             android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/movieImg"
+            android:layout_marginStart="16dp"/>
     <TextView
             android:text="@string/release_date"
             android:layout_width="wrap_content"
